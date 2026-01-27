@@ -11,11 +11,10 @@ _vertag=0.9.9.1
 pkgrel=2
 pkgdesc="An unofficial native port of Mario Kart 64"
 license=("unknown" "MIT")
-arch=('powerpc' 'powerpc64' 'powerpc64le' 'espresso')
+arch=('x86_64' 'aarch64')
 url="https://github.com/HarbourMasters/${_reponame}"
 depends=("sdl2" "sdl2_net" "zenity" "libogg" "libvorbis" "libzip" "tinyxml2" "fmt" "spdlog")
 makedepends=("git" "cmake" "ninja" "nlohmann-json")  # nlohmann-json is set as required on LUS's CMakeLists.txt but not dynamic linked
-install="spaghettikart.install"
 options=('!debug' 'strip')
 source=(#"${_reponame}-${pkgver}.tar.gz::https://github.com/HarbourMasters/${_reponame}/archive/refs/tags/${pkgver}.tar.gz"
         "${_reponame}-${pkgver}.tar.gz::https://github.com/HarbourMasters/${_reponame}/archive/refs/tags/${_vertag}.tar.gz"  # Tag should have been in a version format
