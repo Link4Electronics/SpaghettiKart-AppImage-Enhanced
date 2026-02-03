@@ -42,7 +42,7 @@ cmake . \
     -GNinja \
     -DNON_PORTABLE=On \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_C_FLAGS="-Wno-incompatible-pointer-types"
+    -DCMAKE_C_FLAGS="-Wno-incompatible-pointer-types -Wno-int-conversion"
 cmake --build build --config Release
 cmake --build build --config Release --target GenerateO2R
 cmake --install build
