@@ -34,7 +34,7 @@ git clone --recursive --depth 1 "$REPO" ./SpaghettiKart
 echo "$VERSION" > ~/version
 
 cd ./SpaghettiKart
-#patch -Np1 -i "../spaghettikart-cmake-flags.patch"
+patch -Np1 -i "../spaghettikart-cmake-flags.patch"
 cmake . \
     -Bbuild \
     -GNinja \
