@@ -35,14 +35,14 @@ echo "$VERSION" > ~/version
 
 cd ./SpaghettiKart
 patch -Np1 -i "../spaghettikart-cmake-flags.patch"
-export CFLAGS="${CFLAGS/-Werror=format-security/}"
-export CXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
+export CFLAGS+="-Werror=format-security"
+export CXXFLAGS+="-Werror=format-security"
 cmake . \
     -Bbuild \
     -GNinja \
     -DNON_PORTABLE=On \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -Wno
-cmake --build build --config Release $NINJAFLAGS
+cmake --build build --config Release
 cmake --build build --config Release --target GenerateO2R
 cmake --install build
