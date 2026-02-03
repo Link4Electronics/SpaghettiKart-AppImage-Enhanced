@@ -55,8 +55,8 @@ cp -r build/meta "/usr/bin"
 install -m755 build/Spaghettify "/usr/bin"
 install -m644 -t "/usr/bin" \
         build/config.yml \
-        build/spaghetti.o2r \
-        "SDL_GameControllerDB/gamecontrollerdb.txt"
+        build/spaghetti.o2r
+        #"SDL_GameControllerDB/gamecontrollerdb.txt"
 #install -Dm644 yamls -t "/usr/bin"
 # Link executable to /usr/bin, add to desktop entry & icons
 #  ln -s "${SHIP_PREFIX}/Spaghettify" "${pkgdir}/usr/bin/Spaghettify"
