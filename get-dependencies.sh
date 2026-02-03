@@ -43,23 +43,25 @@ cmake . \
     -DCMAKE_C_FLAGS="-Wno-incompatible-pointer-types -Wno-int-conversion -Wno-changes-meaning"
 cmake --build build --config Release
 cmake --build build --config Release --target GenerateO2R
-cmake --install build
 
-#install -dm755 /usr/bin/
+
+install -dm755 /usr/bin/
 #install -Dm755 "Spaghettify" /usr/bin/
 # Create Directories
-#  install -dm755 "${pkgdir}/${SHIP_PREFIX}" "${pkgdir}/usr/bin/"
+#  install -dm755 "${pkgdir}/${SHIP_PREFIX}" "/usr/bin/"
   # Main executable & assets to /opt
-#  cp -r build/yamls build/meta "${pkgdir}/${SHIP_PREFIX}"
-#  install -m755 build/Spaghettify "${pkgdir}/${SHIP_PREFIX}"
-#  install -m644 -t "${pkgdir}/${SHIP_PREFIX}" \
-#        build/config.yml \
-#        build/spaghetti.o2r \
-#        "${srcdir}/SDL_GameControllerDB/gamecontrollerdb.txt"
-  # Link executable to /usr/bin, add to desktop entry & icons
+cp -r build/yamls "/usr/bin"
+cp -r build/meta "/usr/bin"
+install -m755 build/Spaghettify "/usr/bin"
+install -m644 -t "/usr/bin" \
+        build/config.yml \
+        build/spaghetti.o2r \
+        "SDL_GameControllerDB/gamecontrollerdb.txt"
+#install -Dm644 yamls -t "/usr/bin"
+# Link executable to /usr/bin, add to desktop entry & icons
 #  ln -s "${SHIP_PREFIX}/Spaghettify" "${pkgdir}/usr/bin/Spaghettify"
-#  install -Dm644 "${srcdir}/spaghettikart.desktop" -t "${pkgdir}/usr/share/applications"
-#  install -Dm644 icon.png "${pkgdir}/usr/share/pixmaps/spaghettikart.png"
-  # Licenses (HarbourMasters libraries are MIT, game engine + port source code is nonfree)
-#  install -Dm644 "libultraship/LICENSE" "${pkgdir}/usr/share/licenses/spaghettikart/libultraship-LICENSE"
-#  install -Dm644 "torch/LICENSE" "${pkgdir}/usr/share/licenses/spaghettikart/torch-LICENSE"
+install -Dm644 "spaghettikart.desktop" -t "/usr/share/applications"
+install -Dm644 icon.png "/usr/share/pixmaps/spaghettikart.png"
+# Licenses (HarbourMasters libraries are MIT, game engine + port source code is nonfree)
+install -Dm644 "libultraship/LICENSE" "/usr/share/licenses/spaghettikart/libultraship-LICENSE"
+install -Dm644 "torch/LICENSE" "/usr/share/licenses/spaghettikart/torch-LICENSE"
