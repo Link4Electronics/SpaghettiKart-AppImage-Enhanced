@@ -13,7 +13,7 @@ export DESKTOP=/usr/share/applications/SpaghettiKart.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/Spaghettify /usr/share/spaghettikart
+quick-sharun /usr/bin/Spaghettify /usr/bin/zenity /usr/share/spaghettikart
 mv /usr/share/spaghettikart/spaghetti.o2r /usr/share/spaghettikart/config.yml /usr/share/spaghettikart/meta /usr/share/spaghettikart/yamls ./AppDir/shared/bin/
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/shared/bin' >> ./AppDir/.env
 
