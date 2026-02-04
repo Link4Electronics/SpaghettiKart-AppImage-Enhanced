@@ -69,9 +69,9 @@ else
     cd ./SpaghettiKart
     patch -Np1 -i "../spaghettikart-non-portable-fix.patch"
 	cd libultraship
-  	patch -Np1 -i "./lus-save-file-path.patch"
+  	patch -Np1 -i "../../lus-save-file-path.patch"
   	cd ../torch
-  	patch -Np1 -i "./torch-src-dest-paths.patch"
+  	patch -Np1 -i "../../torch-src-dest-paths.patch"
 	cd ..
     cmake . \
         -Bbuild \
