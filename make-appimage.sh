@@ -22,7 +22,7 @@ mv /usr/bin/spaghetti.o2r /usr/bin/config.yml /usr/bin/meta /usr/bin/yamls ./App
 #mv /opt/spaghettikart/spaghetti.o2r ./AppDir/bin
 #mv /opt/spaghettikart/config.yml ./AppDir/bin
 #mv /opt/spaghettikart/gamecontrollerdb.txt ./AppDir/bin
-echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
+echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 
