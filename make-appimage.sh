@@ -3,21 +3,20 @@
 set -eu
 
 ARCH=$(uname -m)
-#VERSION=$(pacman -Q spaghettikart | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(pacman -Q spaghettikart | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/usr/share/pixmaps/SpaghettiKart.png
-export DESKTOP=/usr/share/applications/SpaghettiKart.desktop
+export ICON=/usr/share/pixmaps/spaghettikart.png
+export DESKTOP=/usr/share/applications/spaghettikart.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/Spaghettify /usr/bin/zenity
-#/usr/share/spaghettikart
-#mv /usr/bin/spaghetti.o2r /usr/bin/config.yml /usr/bin/meta /usr/bin/yamls ./AppDir/shared/bin/
-mv /usr/bin/spaghetti.o2r /usr/bin/config.yml /usr/bin/yamls ./AppDir/shared/bin/
-wget -O ./AppDir/shared/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/refs/heads/master/gamecontrollerdb.txt
+quick-sharun /usr/bin/Spaghettify
+mv /opt/spaghettikart/spaghetti.o2r ./AppDir/bin
+mv /opt/spaghettikart/config.yml ./AppDir/bin
+mv /opt/spaghettikart/gamecontrollerdb.txt ./AppDir/bin
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
