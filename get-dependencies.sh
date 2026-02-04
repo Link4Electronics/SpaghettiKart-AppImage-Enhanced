@@ -16,7 +16,7 @@ pacman -Syu --noconfirm \
     sdl2          \
     sdl2_net      \
     spdlog        \
-    tinyxml2      \
+    tinyxml2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
