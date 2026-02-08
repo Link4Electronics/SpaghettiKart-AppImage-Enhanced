@@ -36,10 +36,8 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./SpaghettiKart
 patch -Np1 -i "../spaghettikart-non-portable-fix.patch"
-cd libultraship
-patch -Np1 -i "../../lus-save-file-path.patch"
-cd ../torch
-patch -Np1 -i "../../torch-src-dest-paths.patch"
+patch -d libultraship -Np1 -i "../../lus-save-file-path.patch"
+patch -d torch -Np1 -i "../../torch-src-dest-paths.patch"
 cmake . \
     -Bbuild \
     -GNinja \
