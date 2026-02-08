@@ -45,7 +45,7 @@ cmake . \
     -GNinja \
     -DNON_PORTABLE=On
 cmake --build build --config Release
-cmake --build build --config Release --target GeneratePortO2R
+cmake --build build --config Release --target GenerateO2R
 
 mv -v build/yamls ../AppDir/bin
 mv -v build/Spaghettify ../AppDir/bin
