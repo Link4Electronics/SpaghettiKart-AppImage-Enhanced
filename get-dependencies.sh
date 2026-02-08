@@ -7,7 +7,17 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    libdecor \
+    cmake         \
+    fmt           \
+    libdecor      \
+    libogg        \
+    libvorbis     \
+    libzip        \
+    ninja         \
+    nlohmann-json \
+    sdl2          \
+    sdl2_net      \
+    spdlog        \
     tinyxml2
 
 echo "Installing debloated packages..."
