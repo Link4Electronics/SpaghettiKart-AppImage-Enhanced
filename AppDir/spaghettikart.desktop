@@ -4,5 +4,6 @@ Comment=An unofficial port of Mario Kart 64
 Exec=Spaghettify
 Terminal=false
 Icon=spaghettikart
+StartupWMClass=Spaghettify
 Type=Application
 Categories=Game;Retro;
