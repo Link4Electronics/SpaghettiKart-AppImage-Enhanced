@@ -1,5 +1,5 @@
 #!/bin/sh
-dir=${XDG_DATA_HOME:-~/.local/share}/spaghettify
+dir=$DATADIR/spaghettify
 mkdir -p "$dir"
 cd "$dir"
 
